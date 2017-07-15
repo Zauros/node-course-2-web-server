@@ -2,3 +2,4 @@ node_modules/
 server.log
 .jshintrc
 package-lock.json
+.gitignore
