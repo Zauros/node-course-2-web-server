@@ -8,7 +8,6 @@ app.set("view engine","hbs");
 app.use(express.static(__dirname+"/public"));
 app.use((req,res,next)=>{
   var now =new Date().toString();
-  res.render("mantenance.hbs");
   var log ="time "+ now+" "+req.method +" "+req.url;
   fs.appendFile("server.log",log+"\n",(err)=>{if(err){console.log("unable write a file");}});
   next();
