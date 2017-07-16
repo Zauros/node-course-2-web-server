@@ -21,6 +21,9 @@ hbs.registerHelper("getCurrentYear",()=>{
 app.get("/",(req,res)=>{
   res.render("home.hbs",{pageTitle:"questa e la homepage",pageBody:"questa è il corpo della pagina principale"});
 });
+app.get("/portfolio",(req,res)=>{
+  res.render("portfolio",{pageTitle:"Portfolio Page",pageBody:"Questa pagina è una sorta di vetrina per i tuoi progetti"});
+});
 app.get("/about",(req,res) =>{
   res.render("about.hbs",{
     pageTitle: "About Page"
